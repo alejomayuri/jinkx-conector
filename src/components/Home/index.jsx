@@ -80,7 +80,7 @@ function Home() {
                     <h3>Mis archivos</h3>
                     {
                         archivosUser?
-                        archivosUser.map(item => (
+                        archivosUser.filter(item => currentUser.uid === item.userId).map(item => (
                             <p>{item.document.nombre}</p>
                         ))
                         :
